@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Framework de Creación de Contenido | PURPLE AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .framework-hero {
+        padding: 100px 0 50px;
+        text-align: center;
+      }
+      .step-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 4rem;
+      }
+      .step {
+        display: flex;
+        gap: 3rem;
+        align-items: flex-start;
+      }
+      .step-number {
+        font-size: 5rem;
+        font-weight: 900;
+        color: var(--primary-purple);
+        line-height: 0.8;
+        opacity: 0.5;
+        flex-shrink: 0;
+        width: 100px;
+      }
+      .step-content {
+        border-left: 2px solid var(--glass-border);
+        padding-left: 2rem;
+      }
+      .step-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-white);
+      }
+      .step-content p {
+        color: var(--text-gray);
+        font-size: 1.1rem;
+        max-width: 800px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: var(--primary-purple);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      @media (max-width: 768px) {
+        .step {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .step-number {
+          font-size: 3rem;
+          width: auto;
+        }
+        .step-content {
+          padding-left: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo" style="text-decoration: none"
+          >PURPLE</a
+        >
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="framework-hero">
+        <a href="index.html" class="back-link">← VOLVER AL INICIO</a>
+        <h1 class="hero-title">
+          <span>EL FRAMEWORK</span>
+          <span class="gradient-text">PURPLE CONTENT</span>
+        </h1>
+        <p
+          style="
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+          "
+        >
+          Un proceso estructurado de 4 fases para escalar la producción creativa
+          utilizando modelos de lenguaje y síntesis visual, manteniendo la
+          calidad y autenticidad de marca.
+        </p>
+      </section>
+
+      <div class="step-container">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>CONTEXTO Y ESTRATEGIA (DNA)</h3>
+            <p>
+              Antes de generar, definimos el "Genoma de Marca". Esto incluye el
+              tono de voz, los valores fundamentales y los objetivos
+              específicos. La IA necesita un marco ético y estilístico para
+              evitar resultados genéricos.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>INGENIERÍA DE PROMPTS MULTIMODAL</h3>
+            <p>
+              Aplicamos técnicas de Few-shot y Chain of Thought para descomponer
+              piezas complejas en tareas atómicas. Utilizamos modelos
+              especializados para texto, imagen y video de forma orquestada.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>CURADURÍA Y FACT-CHECKING</h3>
+            <p>
+              El "Human-in-the-loop" es innegociable. Validamos la veracidad de
+              la información, ajustamos el estilo para que sea natural y
+              aseguramos que el contenido aporte valor real más allá de la
+              optimización SEO.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>ADAPTACIÓN Y DESPLIEGUE</h3>
+            <p>
+              Transformamos la pieza central en múltiples formatos
+              (micro-contenido para redes, artículos profundos, guiones)
+              asegurando una narrativa transmedia coherente y optimizada para
+              cada canal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      style="
+        padding: 4rem 0;
+        border-top: 1px solid var(--glass-border);
+        text-align: center;
+        margin-top: 6rem;
+      "
+    >
+      <div class="logo" style="margin-bottom: 1rem">PURPLE</div>
+      <p style="font-size: 0.8rem; color: var(--text-gray)">
+        © 2026 PURPLE AI. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

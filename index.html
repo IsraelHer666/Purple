@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PURPLE | Futuro e Implementación de la IA</title>
-    <link rel="stylesheet" href="./purple_ai/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
       rel="stylesheet"
@@ -14,7 +14,12 @@
     <header>
       <div class="container">
         <div class="logo">PURPLE</div>
-        <nav>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="#consejos">CONSEJOS</a></li>
             <li><a href="#regulacion">REGULACIÓN</a></li>
@@ -36,7 +41,7 @@
           <!-- Card Software -->
           <div class="card card-software">
             <div class="tag">TECH-01</div>
-            <div class="icon">💻</div>
+            <div class="icon" style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
             <h2>IA EN EL DESARROLLO DE SOFTWARE</h2>
             <p>
               Automatización de pruebas, generación de código boilerplate y
@@ -65,26 +70,19 @@
 
           <!-- Card Contenido -->
           <div class="card card-content">
-            <div class="icon">🎨</div>
+            <div class="icon" style="font-size: 2rem; margin-bottom: 1rem;">🎨</div>
             <h3>IA EN LA CREACIÓN DE CONTENIDO</h3>
             <p>
               De la narrativa transmedia a la síntesis visual hiperrealista.
               Redefiniendo la propiedad intelectual y la escala creativa.
             </p>
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                margin-top: auto;
-              "
-            >
-              <button class="btn">Ver Framework</button>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto; padding-top: 2rem;">
+              <a href="framework.html" class="btn" style="text-decoration: none; text-align: center; display: inline-block;">Ver Framework</a>
               <a
                 href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier"
                 target="_blank"
                 class="read-more"
-                style="color: black; border-color: black"
+                style="color: black; border-color: black; margin-top: 0;"
                 >Reporte McKinsey →</a
               >
             </div>
@@ -92,7 +90,7 @@
 
           <!-- Card Datos -->
           <div class="card card-data">
-            <div class="icon">📊</div>
+            <div class="icon" style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
             <h3>IA EN ANÁLISIS DE DATOS</h3>
             <p>
               Procesamiento de lenguaje natural para consultar bases de datos
@@ -113,24 +111,25 @@
             class="card card-industrial"
             style="display: flex; gap: 2rem; align-items: center"
           >
-            <div style="flex: 1">
+            <div style="flex: 1.5">
               <h3>IMPLEMENTACIÓN INDUSTRIAL</h3>
               <p>
                 Optimización de cadenas de suministro mediante gemelos digitales
                 impulsados por IA y mantenimiento predictivo en tiempo real.
               </p>
-              <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem">
-                <li>🟣 Logística Autónoma</li>
-                <li>🟣 Gestión de Residuos</li>
-                <li>🟣 Control de Calidad Visionario</li>
+              <ul style="list-style: none; margin-top: 1.5rem; font-size: 0.9rem">
+                <li style="margin-bottom: 0.5rem">🟣 Logística Autónoma</li>
+                <li style="margin-bottom: 0.5rem">🟣 Gestión de Residuos</li>
+                <li style="margin-bottom: 0.5rem">🟣 Control de Calidad Visionario</li>
               </ul>
             </div>
             <div
               style="
                 flex: 1;
-                border-radius: 4px;
+                border-radius: 8px;
                 overflow: hidden;
-                height: 100%;
+                min-height: 200px;
+                position: relative;
               "
             >
               <img
@@ -152,18 +151,18 @@
         style="
           border: 0;
           border-top: 1px solid var(--glass-border);
-          margin: 4rem 0;
+          margin: 2rem 0;
         "
       />
 
       <!-- Sección 2: Consejos -->
       <section id="consejos" class="container">
         <div class="section-header">
-          <h2 class="gradient-text" style="font-size: 3rem">DOMINANDO LA IA</h2>
-          <h2 style="font-size: 3rem; margin-bottom: 1rem">
+          <h2 class="gradient-text" style="font-size: clamp(2rem, 5vw, 3.5rem)">DOMINANDO LA IA</h2>
+          <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem">
             CONSEJOS Y MEJORES PRÁCTICAS
           </h2>
-          <p style="color: var(--text-gray); max-width: 600px">
+          <p style="color: var(--text-gray); max-width: 700px; font-size: 1.1rem">
             Guía definitiva para maximizar el potencial de los modelos
             generativos. Desde la estructura del prompt hasta la optimización
             técnica de parámetros.
@@ -171,7 +170,7 @@
         </div>
 
         <span class="section-tag">INGENIERÍA DE PROMPTS</span>
-        <div style="margin-bottom: 2rem">
+        <div style="margin-bottom: 3rem">
           <a
             href="https://www.promptingguide.ai/techniques"
             target="_blank"
@@ -181,7 +180,7 @@
         </div>
         <div class="prompt-grid">
           <div class="prompt-card">
-            <div class="icon">⚡</div>
+            <div class="icon" style="font-size: 1.5rem;">⚡</div>
             <h4>Zero-shot</h4>
             <p>
               Instrucciones directas sin ejemplos previos. Ideal para tareas
@@ -195,7 +194,7 @@
           </div>
 
           <div class="prompt-card featured">
-            <div class="icon">✨</div>
+            <div class="icon" style="font-size: 1.5rem;">✨</div>
             <h4>Few-shot</h4>
             <p>
               Proporcionar ejemplos estructurados para guiar al modelo hacia un
@@ -212,7 +211,7 @@
           </div>
 
           <div class="prompt-card">
-            <div class="icon">🧠</div>
+            <div class="icon" style="font-size: 1.5rem;">🧠</div>
             <h4>Chain of Thought</h4>
             <p>
               Obliga al modelo a razonar paso a paso. Crucial para lógica
@@ -225,20 +224,21 @@
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 4rem">
+        <div style="text-align: center; margin-top: 5rem">
           <span
             style="
               font-size: 0.8rem;
-              letter-spacing: 2px;
+              letter-spacing: 3px;
               color: var(--text-gray);
+              text-transform: uppercase;
             "
             >SEGURIDAD Y PRIVACIDAD</span
           >
         </div>
 
-        <div class="prompt-grid" style="margin-top: 2rem">
+        <div class="prompt-grid" style="margin-top: 2.5rem">
           <div class="prompt-card">
-            <div class="icon">🔒</div>
+            <div class="icon" style="font-size: 1.5rem; margin-bottom: 1rem;">🔒</div>
             <h4>Anonimización</h4>
             <p>
               Nunca compartas PII (Información de Identificación Personal) en
@@ -246,7 +246,7 @@
             </p>
           </div>
           <div class="prompt-card">
-            <div class="icon">🛡️</div>
+            <div class="icon" style="font-size: 1.5rem; margin-bottom: 1rem;">🛡️</div>
             <h4>Gobernanza</h4>
             <p>
               Establece filtros de salida para evitar la generación de contenido
@@ -254,7 +254,7 @@
             </p>
           </div>
           <div class="prompt-card">
-            <div class="icon">👁️‍🗨️</div>
+            <div class="icon" style="font-size: 1.5rem; margin-bottom: 1rem;">👁️‍🗨️</div>
             <h4>Op-Out</h4>
             <p>
               Configura tus APIs para que los logs no se utilicen en el
@@ -271,7 +271,7 @@
           <span class="gradient-text">AUTORIDAD</span>
         </h2>
         <p
-          style="color: var(--text-gray); max-width: 600px; margin-bottom: 4rem"
+          style="color: var(--text-gray); max-width: 600px; margin-bottom: 4rem; font-size: 1.1rem"
         >
           Navegamos la intersección entre la innovación radical y la soberanía
           jurídica. Un análisis exhaustivo de las normativas que definen el
@@ -280,10 +280,10 @@
 
         <div class="authority-content">
           <div class="authority-text">
-            <h3 style="font-size: 2rem; margin-bottom: 2rem">
+            <h3 style="font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 2rem">
               ÉTICA ALGORÍTMICA: EL IMPERATIVO MORAL
             </h3>
-            <p style="margin-bottom: 2rem">
+            <p style="margin-bottom: 2.5rem; color: var(--text-gray)">
               Más allá de la ley, existe la responsabilidad. La IA Generativa
               debe ser diseñada para evitar sesgos sistémicos y garantizar la
               transparencia en los procesos de decisión automatizados.
@@ -293,8 +293,8 @@
               <div style="display: flex; align-items: flex-start">
                 <span>01</span>
                 <div>
-                  <strong>MITIGACIÓN DE SESGOS</strong>
-                  <p style="font-size: 0.9rem; color: var(--text-gray)">
+                  <strong style="display: block; margin-bottom: 5px;">MITIGACIÓN DE SESGOS</strong>
+                  <p style="font-size: 0.95rem; color: var(--text-gray)">
                     Auditorías periódicas de datasets para eliminar prejuicios
                     raciales, de género o socioeconómicos.
                   </p>
@@ -306,8 +306,8 @@
               <div style="display: flex; align-items: flex-start">
                 <span>02</span>
                 <div>
-                  <strong>EXPLICABILIDAD (XAI)</strong>
-                  <p style="font-size: 0.9rem; color: var(--text-gray)">
+                  <strong style="display: block; margin-bottom: 5px;">EXPLICABILIDAD (XAI)</strong>
+                  <p style="font-size: 0.95rem; color: var(--text-gray)">
                     Los modelos deben ser capaces de justificar sus resultados
                     de manera comprensible para humanos.
                   </p>
@@ -315,17 +315,19 @@
               </div>
             </div>
 
-            <div style="margin-top: 2rem; display: flex; gap: 2rem">
+            <div style="margin-top: 3rem; display: flex; gap: 2rem; flex-wrap: wrap;">
               <a
                 href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
                 target="_blank"
                 class="read-more"
+                style="margin-top: 0"
                 >Marco Legal UE →</a
               >
               <a
                 href="https://www.ibm.com/impact/ai-ethics"
                 target="_blank"
                 class="read-more"
+                style="margin-top: 0"
                 >Ética IBM →</a
               >
             </div>
@@ -340,26 +342,47 @@
 
     <footer
       style="
-        padding: 4rem 0;
+        padding: 6rem 0 3rem;
         border-top: 1px solid var(--glass-border);
         text-align: center;
       "
     >
-      <div class="logo" style="margin-bottom: 1rem">PURPLE</div>
-      <p style="font-size: 0.8rem; color: var(--text-gray)">
+      <div class="logo" style="margin-bottom: 1.5rem; font-size: 2rem;">PURPLE</div>
+      <p style="font-size: 0.85rem; color: var(--text-gray); letter-spacing: 1px;">
         © 2026 PURPLE AI. Todos los derechos reservados.
       </p>
     </footer>
 
     <script>
-      // Simple active link handler
+      // Hamburger Menu Toggle
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenu = document.getElementById('nav-menu');
       const navLinks = document.querySelectorAll("nav ul li a");
+
+      mobileMenu.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+      });
+
+      // Close menu when clicking a link
+      navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+              mobileMenu.classList.remove('active');
+              navMenu.classList.remove('active');
+              document.body.style.overflow = 'auto';
+          });
+      });
+
+      // Scroll Spy & Header Highlight
       window.addEventListener("scroll", () => {
         let current = "";
         const sections = document.querySelectorAll("section");
+        const scrollPos = window.scrollY + 150;
+
         sections.forEach((section) => {
           const sectionTop = section.offsetTop;
-          if (pageYOffset >= sectionTop - 100) {
+          if (scrollPos >= sectionTop) {
             current = section.getAttribute("id");
           }
         });
